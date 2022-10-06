@@ -1,0 +1,63 @@
+Bienvenue dans le guide developpeur!
+Ceci est une application simple de commerce.
+
+Ce guide detail:
+    - L’architecture logicielle choisie.
+    - Les classes et interfaces utilisées.
+    - Le modèle de données manipulées par l’application.
+    - Description des algorithmes utilisés.
+    - Cas d'utilisation.
+
+----
+
+Architecture logicielle:
+    - Top-down (hierarchie Site->Produit->Commandes).
+
+Classes:
+    - Site: Classe mere. Contient toutes les donnees relatives au commerce.
+    - GUISite: Mode graphique de la classe Site (interface).
+    - GUI*: Classes reservees a l'interface graphique (fenetres & formulaires).
+    - Parser: Ensemble de methodes statique pour l'acquisition des donnees.
+    - Commande: Classe decrivant une commande utilisateur avec les produits associes.
+    - Produit: Classe decrivant un produit avec sa reference et sa quantite.
+
+Interfaces:
+    - Graphique (cf. GUISite).
+
+Modèle de données:
+    - CSV (entree BDD).
+    - Trois listes (classe Site): livrees, non livrees, en attente.
+
+Algorithmes utilisés:
+    - Bubble sort (Site::sortCammandeByDate(ArrayList<Commande> commande); // Trie les commandes par date).
+
+----
+
+Pour afficher le stock:
+    - Utiliser la methode 'Site::listerTousProduits(void)'.
+
+Pour afficher un produit:
+    - Utiliser la methode 'Site::listerProduit(String referenceProduit)'.
+
+Pour afficher toutes les commandes:
+    - Utiliser le methode 'Site::listerToutesCommandes(void)'.
+
+Pour afficher une commande:
+    - Utiliser la methode 'Site::listerCommande(int numeroCommande)'.
+
+Pour livrer toutes les commandes y compris celles non honorees (dans la limite des stocks disponibles):
+    - Utiliser la methode 'Site::toutLivrer(void)'.
+
+Pour calculer votre solde:
+    - Utiliser le getter 'Site::getSolde(void)'.
+
+Pour modifier une quantite d'une commande:
+    - Utiliser le setter 'Commande::setQty(String reference, int quantite)'.
+
+Pour ajouter un produit:
+    - Creer un nouveau produit avec le constructeur de Produit.
+    - Utiliser la methode 'Site::addProduit(Produit nouveauProduit)'.
+
+La liste privee 'Site::commandes' contient toutes les commandes en attente de livraison.
+La liste privee 'Site::commandesHonorees' contient toutes les commandes honorees (deja livrees).
+La liste privee 'Site::commandesNonHonorees' contient toutes les commandes qui n'ont pas pu etre livrees (stock insuffisant).

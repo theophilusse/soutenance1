@@ -1,0 +1,37 @@
+Bienvenue dans le guide utilisateur!
+Ceci est une application simple de commerce.
+
+Pour afficher le stock:
+    - Cliquer sur 'Tout le stock'.
+
+Pour afficher un produit:
+    - Entrer une reference puis cliquer sur 'Afficher' juste en dessous.
+
+Pour afficher toutes les commandes:
+    - Cliquer sur toutes les commandes.
+
+Pour afficher une commande:
+    - Entrer un numero de commande puis cliquer sur 'Afficher' juste en dessous.
+
+Pour modifier une une commande:
+    - Saisissez l'ID de la commande, puis validez.
+    - Cliquer sur 'Modifier'.
+    - Saisissez les nouvelles quantite, puis validez (prefixes + pour ajouter, - pour soustraire).
+
+Pour livrer toutes les commandes y compris celles non honorees (dans la limite des stocks disponibles):
+    - Cliquer sur 'Livrer'.
+
+Pour calculer votre solde:
+    - Cliquer sur 'Calculer ventes'.
+
+Pour ajouter un produit:
+    - Cliquer sur 'Ajouter un produit'.
+    - Saisissez une reference.
+    - Saisissez un nom.
+    - Saisissez un prix.
+    - Saisissez une quantite, puis validez.
+
+Note:
+
+Vous pouvez annuler une action en cliquant sur 'Annuler'.
+Vous pouvez quitter le programme en cliquant sur 'Fermer'.
